@@ -3,38 +3,53 @@
 **IMPORTANT:** Your job is to only write code.
 **Main Task: 
             Generate a code base for the following requirements:
-            Use React to build the client-side application.
+            Use React to create a client-side application.
         **
 
         **PageContentTypes.TechnicalDesign Requirements:**
-        This document outlines the technical design for a secure, zero-knowledge password manager. The application will use a **React.js** client-side framework for the user interface. Key technologies include **Zustand** for state management, **Tailwind CSS** for styling, and the **Web Crypto API** for client-side encryption and key derivation, ensuring a zero-knowledge security model where sensitive data is never exposed to the server. The project will be structured as a monorepo with a **Node.js/Express.js** backend and **PostgreSQL** database. The implementation plan is divided into phases, starting with user authentication and progressing to secure credential storage, management, and finally, hardening and deployment.
+        This document outlines the technical design for a secure, zero-knowledge password manager application.
+
+**Client-Side Application Requirements:**
+
+*   **Technology:** React.js will be used to create the client-side application.
+*   **Key Features:**
+    *   **Zero-Knowledge Security:** All encryption, decryption, and master password key derivation will occur on the client-side using the Web Crypto API.
+    *   **User Interface:** Built with React.js, managed with Zustand for state, and styled with Tailwind CSS.
+    *   **Routing:** React Router DOM will handle navigation.
+    *   **Cryptography:** Web Crypto API for AES-256 GCM encryption/decryption and PBKDF2 for key derivation.
+    *   **Password Generation:** Algorithmic password generation using CSPRNG.
+    *   **Clipboard Management:** Native `navigator.clipboard` API.
+    *   **Build Tool:** Vite for fast development and building.
+*   **Project Structure:** A monorepo with a `/client` directory containing React components, pages, hooks, utility functions (including `cryptoUtils.ts` and `passwordGenerator.ts`), API clients, and styling.
     
 
         **PageContentTypes.UiUxDesign Requirements:**
-        This Confluence page outlines the UI/UX design specification for a personal password manager application. The core requirements for generating a React client-side codebase are derived from the user flows and key UI components described.
+        This Confluence page outlines the UI/UX design specification for a personal password manager application. It details "How Might We" statements, the overall design philosophy (clean, modern, trustworthy, user-centric, responsive), and key user flows for account creation, login, adding, viewing, copying, editing, and deleting credentials. The document also includes conceptual wireframes for core screens (Login/Registration, Dashboard, Add/Edit Credential) and lists key UI components and interactions such as password strength meters, visibility toggles, one-click copy buttons, a FAB for adding credentials, real-time search, credential cards, a password generator, confirmation dialogs, and toast notifications. Accessibility considerations, including keyboard navigation, screen reader compatibility, color contrast, scalable text, predictable interactions, clear error handling, and touch target size, are also explicitly addressed.
 
-**Key Requirements for React Codebase Generation:**
+**Information relevant to generating a React client-side application:**
 
-*   **User Authentication:** Implement screens and logic for user registration (including master password strength feedback) and login.
-*   **Credential Management:**
-    *   **Adding Credentials:** Develop a form for adding new credentials, including fields for name, username, password, URL, notes, and tags.
-    *   **Password Generation:** Integrate a password generator component with configurable options (length, character types) that can populate the password field.
-    *   **Viewing & Copying:** Display a list of credentials with masked passwords. Implement functionality to reveal passwords and one-click copy for username, password, and URL.
-    *   **Editing Credentials:** Provide an interface to edit existing credential details.
-    *   **Deleting Credentials:** Implement a confirmation dialog for deleting credentials.
-*   **Navigation & Layout:**
-    *   **Mobile-First Design:** Structure the application with a mobile-first approach, ensuring responsiveness for tablet and desktop.
-    *   **Dashboard:** Create a "My Credentials" dashboard displaying credentials in a list or card format.
-    *   **Search Functionality:** Implement real-time search filtering for credentials.
-    *   **Floating Action Button (FAB):** Use a FAB for the primary action of adding new credentials.
-*   **UI Components & Interactions:**
-    *   **Master Password Strength Meter:** A dynamic visual indicator for password strength during registration.
-    *   **Password Visibility Toggle:** An "eye" icon to show/hide password fields.
-    *   **One-Click Copy Buttons:** Icons to copy data to the clipboard.
-    *   **Credential Cards/Rows:** Components to display individual credential entries.
-    *   **Password Generator Modal:** A modal for generating secure passwords.
-    *   **Confirmation Dialogs:** Modals for critical actions like deletion.
-    *   **Toast Notifications:** Temporary messages for user feedback.
-*   **Accessibility:** Ensure keyboard navigation, screen reader compatibility, sufficient color contrast, scalable text, predictable interactions, clear error handling, and adequate touch target sizes.
-*   **Aesthetics:** Employ a clean, modern, trustworthy, and user-centric design with a palette of cool blues, grays, and subtle greens.
+*   **Technology:** The application is to be built using React for the client-side.
+*   **Core Screens/Components:** The design specifies distinct screens and components that will need to be implemented in React:
+    *   Login/Registration Screen (with tabs for Login and Register)
+    *   My Credentials Dashboard (list view with search, credential cards)
+    *   Add/Edit Credential Form
+    *   Password Generator Modal
+    *   Confirmation Dialogs
+    *   Toast Notifications
+*   **Key UI Components/Interactions to implement:**
+    *   Input fields (text, password, email, URL, notes)
+    *   Buttons (primary, secondary, FAB)
+    *   Tabs
+    *   Icons (eye for visibility, copy, menu, search, add)
+    *   Password strength indicator (visual bar and text)
+    *   Sliders and checkboxes for password generation
+    *   Modals/Overlays
+    *   List rendering for credentials
+    *   Search functionality with real-time filtering
+    *   Swipe gestures for mobile (for edit/delete)
+    *   Form validation (inline)
+*   **State Management:** The design implies the need for managing user authentication state, credential data, and UI states (e.g., search active, password visible, modal open).
+*   **Routing:** Different screens (Login, Dashboard, Add/Edit) will require routing.
+*   **API Integration (Implied):** While not explicitly detailed for the client-side, the flows for saving, editing, and deleting credentials suggest interaction with a backend API.
+*   **Accessibility:** Implementation should adhere to accessibility guidelines (ARIA attributes, focus states, keyboard navigation, etc.).
     
