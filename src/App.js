@@ -4,14 +4,15 @@ import './App.css';
 function App() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     if (username === 'user' && password === 'password') {
-      setMessage('Login successful!');
+      alert('Login successful!');
+      setError('');
     } else {
-      setMessage('Invalid credentials.');
+      setError('Invalid username or password');
     }
   };
 
@@ -19,8 +20,8 @@ function App() {
     <div className="App">
       <div className="login-container">
         <h2>Login</h2>
-        <form onSubmit={handleLogin}>
-          <div className="input-group">
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
             <label htmlFor="username">Username:</label>
             <input
               type="text"
@@ -30,7 +31,7 @@ function App() {
               required
             />
           </div>
-          <div className="input-group">
+          <div className="form-group">
             <label htmlFor="password">Password:</label>
             <input
               type="password"
@@ -40,9 +41,9 @@ function App() {
               required
             />
           </div>
+          {error && <p className="error-message">{error}</p>}
           <button type="submit">Login</button>
         </form>
-        {message && <p className="message">{message}</p>}
       </div>
     </div>
   );
