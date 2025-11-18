@@ -1,3 +1,8 @@
+[![npm version](https://img.shields.io/npm/v/my-cli-app.svg?style=flat-square)](https://www.npmjs.com/package/my-cli-app)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Build Status](https://img.shields.io/github/actions/workflow/user/repo/main.yml?style=flat-square)](https://github.com/user/repo/actions)
+[![codecov](https://codecov.io/gh/user/repo/branch.svg?token=your_token&style=flat-square)](https://codecov.io/gh/user/repo)
+
 # Project Overview
 
 This repository contains two distinct applications: a React-based login application and a Python-based Snake game.
