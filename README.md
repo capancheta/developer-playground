@@ -41,3 +41,5 @@ A classic implementation of the Snake game using Python.
     ```bash
     python snake_game.py
     ```
+
+Powered by ACME Corporation
