@@ -1,0 +1,119 @@
+.weather-widget {
+  background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+  color: white;
+}
+
+.weather-search {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.weather-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.weather-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.weather-input:focus {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.weather-search-btn,
+.weather-location-btn {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.weather-location-btn {
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+.weather-search-btn:hover,
+.weather-location-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.weather-data {
+  text-align: center;
+}
+
+.weather-location {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-temp {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.weather-condition {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.weather-description {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.weather-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-label {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.detail-value {
+  font-size: 18px;
+  font-weight: 600;
+}

@@ -1,0 +1,77 @@
+.stock-widget {
+  background: linear-gradient(135deg, #0f9b8e 0%, #2ecc71 100%);
+  color: white;
+}
+
+.stock-data {
+  text-align: center;
+}
+
+.stock-ticker {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.stock-price {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+
+.stock-change {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.stock-change.positive {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.stock-change.negative {
+  background: rgba(255, 82, 82, 0.3);
+  color: #ffffff;
+}
+
+.change-icon {
+  font-size: 14px;
+}
+
+.stock-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stock-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.refresh-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.refresh-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(180deg);
+}
